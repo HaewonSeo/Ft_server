@@ -16,13 +16,13 @@ mv localhost.dev.crt /etc/ssl/certs/
 chmod 600 /etc/ssl/private/localhost.dev.key /etc/ssl/certs/localhost.dev.crt
 
 # Nginx configuration
-cp -rp ./tmp/default /etc/nginx/sites-available
+cp -p ./tmp/default /etc/nginx/sites-available
 
 # Wordpress configuration
 tar -xvf ./tmp/wordpress-5.6.2.tar.gz
 rm ./tmp/wordpress-5.6.2.tar.gz
 mv /wordpress/ /var/www/html
-cp -rp ./tmp/wp-config.php /var/www/html/wordpress
+cp ./tmp/wp-config.php /var/www/html/wordpress
 
 # mariaDB configuration
 echo "CREATE DATABASE wordpress;" \
@@ -39,7 +39,8 @@ tar -xvf ./tmp/phpMyAdmin-4.9.7-all-languages.tar.gz
 rm ./tmp/phpMyAdmin-4.9.7-all-languages.tar.gz
 mv phpMyAdmin-4.9.7-all-languages phpmyadmin
 mv phpmyadmin /var/www/html/
-cp -rp /tmp/config.inc.php /var/www/html/phpmyadmin/
+cp ./tmp/config.inc.php /var/www/html/phpmyadmin/
+mysql < /var/www/html/phpmyadmin/sql/create_tables.sql
 
 # permission setting
 chown -R www-data:www-data /var/www/*
