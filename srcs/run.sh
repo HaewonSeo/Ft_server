@@ -24,7 +24,7 @@ rm ./tmp/wordpress-5.6.2.tar.gz
 mv /wordpress/ /var/www/html
 cp ./tmp/wp-config.php /var/www/html/wordpress
 
-# mariaDB configuration
+# MariaDB configuration
 echo "CREATE DATABASE wordpress;" \
 	| mysql -u root --skip-password
 echo "CREATE USER 'haseo'@'localhost' IDENTIFIED BY 'haseo';" \
