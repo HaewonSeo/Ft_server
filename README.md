@@ -15,3 +15,5 @@ multiples services: Wordpress, phpMyAdmin, and a SQL database.
 - [x] SSL protocol
 - [x] Autoindex
 - [x] php-fpm
+
+![image](./image.png)
