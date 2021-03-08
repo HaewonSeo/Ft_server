@@ -17,3 +17,6 @@ multiples services: Wordpress, phpMyAdmin, and a SQL database.
 - [x] php-fpm
 
 ![image](./image.png)
+
+## Notion
++ [Notion](https://www.notion.so/Ft_server-27d9ce7ae11241b7b63ee743eb035004)
